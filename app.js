@@ -91,17 +91,24 @@ list.removeChild(item);
 // delete function
 function deleteItem(e){
 const element = e.currentTarget.parentElement.parentElement;
+const id = element.dataseet.id;
 list.removeChild(element);
 if(list.children.length === 0){
   container.classList.remove('show-container');
 }
 displayAlert('item removed',"danger");
 setBackToDefault();
+//remove from local storage 
+//removeFromLocalStorage(id);
 
 }
 //edit function 
 function editItem(){
-  console.log('edit item');
+  const element = e.currentTarget.parentElement.parentElement;
+  //set edit item
+  editElement = e.currentTarget.parentElement.previousElementSibling;
+//set form value
+grocery.value = editElement.innerHTML;
 }
 
 //set back to default
@@ -116,4 +123,8 @@ submitBtn.textContent = "submit";
 function addToLocalStorage(id, value){
   console.log("Added to local storage");
 } 
+
+function removeFromLocalStorage(id){
+
+};
 // ****** SETUP ITEMS **********
