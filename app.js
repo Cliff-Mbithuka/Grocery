@@ -68,6 +68,10 @@ function displayAlert(text, action) {
 
 //set back to default
  function setBackToDefault(){
+grocery.value = "";
+editFlag = false;
+editID = "";
+submitBtn.textContent = "submit";
 
 }
 // ****** LOCAL STORAGE **********
