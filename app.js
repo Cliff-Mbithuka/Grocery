@@ -43,6 +43,10 @@ function addItem(e) {
     displayAlert("item added to the list", "success");
     //show container
     container.classList.add("show-container");
+    //add local storage
+    addToLocalStorage(id, value);
+    //set back to default 
+    setBackToDefault();
   } else if (value && editFlag) {
     console.log("eddirtting");
   } else {
@@ -61,6 +65,13 @@ function displayAlert(text, action) {
     alert.classList.remove(`alert-${action}`);
   }, 1000);
 }
-// ****** LOCAL STORAGE **********
 
+//set back to default
+ function setBackToDefault(){
+
+}
+// ****** LOCAL STORAGE **********
+function addToLocalStorage(id, value){
+  console.log("Added to local storage");
+}
 // ****** SETUP ITEMS **********
